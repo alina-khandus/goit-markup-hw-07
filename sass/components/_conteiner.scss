@@ -1,0 +1,35 @@
+/* Global container-sizes*/
+.conteiner {
+  width: 1200px;
+  margin: auto;
+  padding: 94px 15px;
+}
+
+/*Header conteiner*/
+.header .conteiner,
+.header-line .conteiner,
+.footer .conteiner {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.header .conteiner,
+.header-line .conteiner {
+  @extend %JustifyContentBetween;
+  align-items: baseline;
+}
+
+.header-line {
+  border: 1px solid $secondary-color;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
+
+/* Footer conteiner */
+.footer .conteiner {
+  @extend %JustifyContentBetween;
+  align-items: baseline;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}

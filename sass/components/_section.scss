@@ -1,0 +1,141 @@
+/* Hero conteiner */
+.hero {
+  text-align: center;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient($bg-color, $bg-color),
+    url("../img/header.jpg");
+  background-color: $bg-color-two;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &-title {
+    margin: 0;
+    @include marginBottom(30px, $margintop: 0px);
+    color: $secondary-text-color;
+    @include text(900, 44px, 1.36, $letterspacing: 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+/* Difference conteiner */
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  @include size(1px, 1px);
+  overflow: hidden;
+}
+
+.features {
+  display: flex;
+
+  &-title {
+    margin: 0;
+    @include marginBottom(10px, $margintop: 0px);
+    color: $title-text-color;
+    @include text(700, 14px, 1.14, $letterspacing: 0);
+    text-transform: uppercase;
+  }
+
+  &-text {
+    margin: 0px;
+
+    @include text(400, 14px, 1.7, $letterspacing: 0);
+  }
+}
+
+.features-list {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .link {
+    @include size(270px, 120px);
+    border-radius: 4px;
+    background-color: $element-bg-color;
+    @include centeredFlex(inline-flex);
+    margin-bottom: 30px;
+  }
+}
+
+/* Section title */
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+
+  color: $title-text-color;
+  @include text(700, 36px, 1.17, $letterspacing: 0);
+  text-align: center;
+}
+
+/* Services conteiner */
+.services {
+  @extend %FlexWrap;
+
+  &-title {
+    margin: 0;
+    @include marginBottom(0px, $margintop: 0px);
+    color: $secondary-text-color;
+    @include text(700, 14px, 1.14, $letterspacing: 0);
+    text-transform: uppercase;
+  }
+
+  &-img {
+    display: block;
+  }
+
+  &-actions {
+    @include size(370px, 70px);
+    background-color: $bg-color;
+    @include positionLeft(
+      absolute,
+      100%,
+      50%,
+      $transform: translate(-50%, -100%)
+    );
+    @include centeredFlex(flex);
+  }
+}
+
+.section-link {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+/* Сustomers conteiner */
+.section {
+  &-items {
+    @extend %JustifyContentBetween;
+    --color4: currentColor;
+    color: $secondary-icon-color;
+  }
+}
+
+.section-linc {
+  .link {
+    @include size(170px, 90px);
+    @include centeredFlex(inline-flex);
+    border: 1px solid $secondary-icon-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border $time-animation, color $time-animation;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+      color: $accent-color;
+      outline: none;
+    }
+  }
+}

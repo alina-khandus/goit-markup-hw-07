@@ -1,0 +1,50 @@
+/* Menu navigation */
+.nav-conteiner {
+  @extend %AlignItemsCenter;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 85px;
+
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $title-text-color;
+    @include text(500, 14px, 1.14, $letterspacing: 0.02em);
+    position: relative;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      outline: none;
+      transition: color $time-animation;
+    }
+  }
+  .link.current {
+    color: $accent-color;
+  }
+}
+
+.current {
+  &::after {
+    @extend %Current;
+  }
+}
+
+.line-link {
+  &::after {
+    @extend %Current;
+    transform: scaleX(0);
+    transition: transform $time-animation;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}

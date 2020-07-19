@@ -1,0 +1,24 @@
+/* Modal window */
+.backdrop {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  @include size(100%, 100%);
+  background-color: $bs-color-six;
+  transition: $time-animation;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  @include positionLeft(absolute, 50%, 50%, $transform: translate(-50%, -50%));
+  min-width: 528px;
+  min-height: 581px;
+  background-color: $secondary-text-color;
+  @extend %boxShadow;
+  border-radius: 4px;
+}

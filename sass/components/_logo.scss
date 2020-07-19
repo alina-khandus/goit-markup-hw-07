@@ -1,0 +1,22 @@
+/* Logo-color-size WebStudio */
+.logo {
+  color: $accent-color;
+  font-family: $fontfamily-logo;
+  @include text(bold, 26px, 1.2, $letterspacing: 0);
+
+  outline: none;
+}
+
+.colorblack {
+  color: $colorblack-bg-color;
+}
+.colorwite {
+  color: $secondary-text-color;
+}
+
+.footer {
+  .logo {
+    display: inline-block;
+    @include marginBottom(20px, $margintop: 0);
+  }
+}

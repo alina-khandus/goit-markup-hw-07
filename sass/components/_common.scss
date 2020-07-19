@@ -1,0 +1,50 @@
+/* Styles for all HTML*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: none;
+  color: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+  font-family: $fontfamily;
+  letter-spacing: 0.03em;
+  margin: 0px;
+}
+
+footer {
+  background-color: $secondary-bg-color;
+  color: $secondary-text-color;
+}

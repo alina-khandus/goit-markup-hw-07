@@ -1,0 +1,58 @@
+/* Menu address*/
+.address-header {
+  @extend %AlignItemsCenter;
+  --color3: currentColor;
+
+  .link {
+    @extend %AlignItemsCenter;
+    color: $primary-text-color;
+    @include text(500, 14px, 1.14, $letterspacing: 0.02em);
+    transition: border $time-animation, color $time-animation;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      outline: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts {
+  margin-left: 10px;
+}
+
+/* Footer address */
+.address {
+  &-footer {
+    @extend %FlexDirection;
+    width: 231px;
+  }
+
+  &-title {
+    @include text(400, 14px, 1.7, $letterspacing: 0);
+    @include marginBottom(9px, $margintop: 0);
+  }
+}
+
+.address-subject {
+  .link {
+    @extend %FlexDirection;
+    @include marginBottom(9px, $margintop: 0);
+    color: $widht-text-color;
+    @include text(400, 14px, 1.7, $letterspacing: 0);
+    transition: background-color $time-animation, color $time-animation;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      outline: none;
+    }
+    &:nth-last-child(-n + 1) {
+      margin-bottom: 0;
+    }
+  }
+}
